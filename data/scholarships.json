@@ -1,0 +1,980 @@
+{
+  "lastUpdated": "2026-03-21",
+  "scholarships": [
+    {
+      "id": "s1",
+      "type": "scholarship",
+      "title": "Lenfest Scholarship",
+      "amount": "Up to $12,000",
+      "amountNum": 12000,
+      "category": "General",
+      "desc": "One of the most generous scholarships available to Chester County high school juniors. Awarded since 2001 to students with financial need and strong character.",
+      "eligibility": "Chester County PA high school juniors with demonstrated financial need. Must attend an accredited 4-year institution.",
+      "deadline": "February 1, 2026",
+      "deadlineDate": "2026-02-01",
+      "how": "Apply online at lenfestscholars.org. Requires transcripts, two recommendations, and a personal statement.",
+      "source": "lenfestscholars.org — verified program since 2001",
+      "url": "https://www.lenfestscholars.org/applynow",
+      "grades": [
+        "11th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "General",
+        "Community"
+      ]
+    },
+    {
+      "id": "s2",
+      "type": "scholarship",
+      "title": "PCHF Healthcare Scholarship",
+      "amount": "Varies",
+      "amountNum": 3000,
+      "category": "Healthcare",
+      "desc": "The Phoenixville Community Health Foundation awards scholarships specifically to Phoenixville-area seniors pursuing degrees in healthcare or human services.",
+      "eligibility": "Phoenixville-area high school seniors planning to study healthcare, nursing, social work, or human services at an accredited institution.",
+      "deadline": "March 31, 2026",
+      "deadlineDate": "2026-03-31",
+      "how": "Apply through PCHF directly. Visit pchf.org for the current application. Letters of recommendation and an essay required.",
+      "source": "pchf.org — Phoenixville Community Health Foundation",
+      "url": "https://pchf.net/scholarships/",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "Healthcare",
+        "Community"
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "scholarship",
+      "title": "Chester County Community Foundation",
+      "amount": "Multiple Awards",
+      "amountNum": 5000,
+      "category": "General",
+      "desc": "The CCCF manages dozens of named scholarship funds. One Universal Application covers many awards — ideal for Chester County students who want to maximize their chances.",
+      "eligibility": "Chester County residents attending or planning to attend a post-secondary institution. Various funds have different criteria.",
+      "deadline": "March 15, 2026",
+      "deadlineDate": "2026-03-15",
+      "how": "Submit the Universal Scholarship Application at chescocf.org. One form = many scholarships.",
+      "source": "chescocf.org — Chester County Community Foundation",
+      "url": "https://www.chescocf.org/grants-scholarships/scholarships/",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "General",
+        "Arts",
+        "STEM",
+        "Community"
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "scholarship",
+      "title": "Philadelphia Foundation Scholarship",
+      "amount": "Varies (200+ awards)",
+      "amountNum": 4000,
+      "category": "General",
+      "desc": "The Philadelphia Foundation awards over 200 scholarships annually through one Common Application. Chester County residents are explicitly eligible.",
+      "eligibility": "Students from Philadelphia and surrounding counties including Chester County. Various academic and need-based criteria apply.",
+      "deadline": "March 30, 2026",
+      "deadlineDate": "2026-03-30",
+      "how": "Apply via the Common Scholarship Application at philafound.org. One application covers 200+ scholarships.",
+      "source": "philafound.org — Philadelphia Foundation",
+      "url": "https://www.philafound.org/scholarships/",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "General",
+        "STEM",
+        "Arts",
+        "Community",
+        "Healthcare"
+      ]
+    },
+    {
+      "id": "s5",
+      "type": "scholarship",
+      "title": "PAHS Naviance Scholarship List",
+      "amount": "Various",
+      "amountNum": 2000,
+      "category": "General",
+      "desc": "Phoenixville Area High School maintains a curated scholarship list in Naviance updated throughout the year. New awards are added regularly — check it often.",
+      "eligibility": "Current PAHS students. Requirements vary by individual scholarship.",
+      "deadline": "Rolling — check Naviance",
+      "deadlineDate": "2026-06-01",
+      "how": "Log in to Naviance through your PAHS student account. Visit your school counselor for access help.",
+      "source": "Phoenixville Area High School Guidance Office",
+      "url": "https://www.pasd.com/domain/147",
+      "grades": [
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "General",
+        "STEM",
+        "Arts",
+        "Healthcare",
+        "Community"
+      ]
+    },
+    {
+      "id": "s6",
+      "type": "scholarship",
+      "title": "PFMA Ridge Scholarship",
+      "amount": "$2,500",
+      "amountNum": 2500,
+      "category": "Community",
+      "desc": "Past winners have included Phoenixville-area students. Ideal for students whose family works in the retail grocery industry (Giant, Wawa, etc.).",
+      "eligibility": "Students with a family connection to the retail food/grocery industry. Must demonstrate community involvement.",
+      "deadline": "April 15, 2026",
+      "deadlineDate": "2026-04-15",
+      "how": "Apply at pfma.org. Include family employment verification and a personal essay.",
+      "source": "pfma.org — Pennsylvania Food Merchants Association",
+      "url": "https://www.pfma.org/scholarship",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "Community",
+        "General"
+      ],
+      "familyRetail": true
+    },
+    {
+      "id": "s7",
+      "type": "scholarship",
+      "title": "Exelon Foundation Chris Crane Scholarship",
+      "amount": "Full Tuition + Room & Board",
+      "amountNum": 40000,
+      "category": "STEM",
+      "desc": "A full scholarship covering tuition, books, room, board, and all fees for STEM Academy alumni pursuing STEM-related fields. Also includes guaranteed internships with Exelon throughout college.",
+      "eligibility": "Must be a graduate of the Exelon STEM Academy program. STEM field of study required.",
+      "deadline": "December 2026 (apply to Academy first)",
+      "deadlineDate": "2026-12-01",
+      "how": "Attend the Exelon STEM Academy first (see Internships tab). Scholarship applications open to Academy graduates.",
+      "source": "exelonstemacademy.org — Exelon Foundation",
+      "url": "https://www.exelonstemacademy.org/apply",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "STEM"
+      ]
+    },
+    {
+      "id": "s8",
+      "type": "scholarship",
+      "title": "Main Line Health Nursing Scholarship",
+      "amount": "Up to $5,000",
+      "amountNum": 5000,
+      "category": "Healthcare",
+      "desc": "Main Line Health offers scholarships to students from the greater Philadelphia region pursuing nursing or allied health degrees. Students from Chester County are eligible.",
+      "eligibility": "Seniors pursuing nursing or allied health at an accredited school. Must commit to working at a Main Line Health facility after graduation.",
+      "deadline": "April 30, 2026",
+      "deadlineDate": "2026-04-30",
+      "how": "Apply at mainlinehealth.org/careers. Requires essay, transcripts, and two recommendations.",
+      "source": "mainlinehealth.org",
+      "url": "https://www.mainlinehealth.org/giving/scholarships",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "Healthcare"
+      ]
+    },
+    {
+      "id": "s9",
+      "type": "scholarship",
+      "title": "PA State Grant (PHEAA)",
+      "amount": "Up to $5,750/yr",
+      "amountNum": 5750,
+      "category": "General",
+      "desc": "Pennsylvania's primary need-based grant program for college students. One of the largest sources of aid for PA residents — every eligible student should apply.",
+      "eligibility": "PA resident, first-time college students with demonstrated financial need. FAFSA must be filed by May 1.",
+      "deadline": "May 1, 2026",
+      "deadlineDate": "2026-05-01",
+      "how": "File FAFSA at fafsa.gov. PA State Grant is automatically considered. Check pheaa.org for status.",
+      "source": "pheaa.org — Pennsylvania Higher Education Assistance Agency",
+      "url": "https://www.pheaa.org/funding-opportunities/state-grant-program/",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "General",
+        "STEM",
+        "Arts",
+        "Healthcare",
+        "Community"
+      ]
+    },
+    {
+      "id": "s10",
+      "type": "scholarship",
+      "title": "Vanguard Scholarship Program",
+      "amount": "Varies",
+      "amountNum": 3500,
+      "category": "STEM",
+      "desc": "Vanguard, headquartered in Malvern just 5 miles from Phoenixville, offers scholarships through the Vanguard Strong Start program for students pursuing finance or business degrees.",
+      "eligibility": "Students pursuing finance, business, economics, or related STEM/quantitative fields. Chester County residents given preference.",
+      "deadline": "February 28, 2026",
+      "deadlineDate": "2026-02-28",
+      "how": "Apply at vanguard.com/corporate/careers/community. Check with PAHS counselor for current cycle.",
+      "source": "vanguard.com — The Vanguard Group, Malvern PA",
+      "url": "https://www.vanguard.com/corporate/careers/students-and-new-grads.html",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "35plus",
+      "interests": [
+        "STEM",
+        "General"
+      ]
+    }
+  ],
+  "internships": [
+    {
+      "id": "i1",
+      "type": "internship",
+      "title": "Vanguard Summer Internship",
+      "amount": "$17–$25/hr · Paid",
+      "category": "Finance",
+      "desc": "10-week paid summer internship at Vanguard's Malvern campus, just 5 miles from Phoenixville. Roles in finance, technology, and operations.",
+      "eligibility": "Rising college juniors and seniors. High school internships available through the North Star program (see below). GPA 3.0+ preferred.",
+      "deadline": "January 31, 2026",
+      "deadlineDate": "2026-01-31",
+      "how": "Apply at vanguard.com/careers. Roles are posted in November–January for the following summer.",
+      "source": "vanguard.com — Malvern, PA (5 miles)",
+      "url": "https://www.vanguard.com/corporate/careers/students",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "Finance",
+        "STEM"
+      ]
+    },
+    {
+      "id": "i2",
+      "type": "internship",
+      "title": "Vanguard North Star Program",
+      "amount": "Free · Virtual · 2 days",
+      "category": "Finance",
+      "desc": "A free two-day virtual program for sophomore college students from underrepresented backgrounds (Black, Hispanic/Latinx, Indigenous). Gain access to Vanguard leaders across finance, technology, and investment management — and get priority access to interview for Vanguard's paid summer internship.",
+      "eligibility": "Sophomore college students (graduating Dec 2027 or May 2028) from Black, Hispanic/Latinx, or Indigenous backgrounds. Application window: March 9–23, 2026 only. Program runs virtually May 12–13, 2026.",
+      "deadline": "March 23, 2026",
+      "deadlineDate": "2026-03-23",
+      "how": "Apply at vanguardjobs.com/north-star-experiential-learning-program — window only open March 9–23, 2026.",
+      "source": "vanguardjobs.com — The Vanguard Group, Malvern PA",
+      "url": "https://www.vanguardjobs.com/north-star-experiential-learning-program/",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "Finance",
+        "General"
+      ]
+    },
+    {
+      "id": "i3",
+      "type": "internship",
+      "title": "SEI Investments Internship",
+      "amount": "Competitive Pay",
+      "category": "Finance",
+      "desc": "SEI Investments is headquartered in Oaks, PA — just 3 miles from Phoenixville. They hire college interns in finance, technology, and operations each summer.",
+      "eligibility": "College students only. Applications open January ONLY — short window, apply early.",
+      "deadline": "January 31, 2026",
+      "deadlineDate": "2026-01-31",
+      "how": "Apply at seic.com/careers. Window opens and closes in January — set a reminder.",
+      "source": "seic.com — Oaks, PA (3 miles)",
+      "url": "https://www.seic.com/careers",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "35plus",
+      "interests": [
+        "Finance",
+        "STEM"
+      ]
+    },
+    {
+      "id": "i4",
+      "type": "internship",
+      "title": "Siemens Healthineers Internship",
+      "amount": "$24–$40/hr · Paid",
+      "category": "Tech",
+      "desc": "Siemens Healthineers' Malvern campus (5 miles) hires engineering and software interns each summer. One of the highest-paying internships in the region.",
+      "eligibility": "College students in engineering, computer science, or biomedical fields. GPA 3.2+ preferred.",
+      "deadline": "February 15, 2026",
+      "deadlineDate": "2026-02-15",
+      "how": "Apply at siemens-healthineers.com/careers. Filter by Malvern, PA.",
+      "source": "siemens-healthineers.com — Malvern, PA (5 miles)",
+      "url": "https://www.siemens-healthineers.com/careers",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "35plus",
+      "interests": [
+        "STEM",
+        "Tech"
+      ]
+    },
+    {
+      "id": "i5",
+      "type": "internship",
+      "title": "Phoenixville Hospital Volunteer Program",
+      "amount": "Volunteer (Academic Credit)",
+      "category": "Healthcare",
+      "desc": "Tower Health's Phoenixville Hospital runs a structured volunteer/shadow program open to students 16 and older. Great for students pursuing healthcare careers.",
+      "eligibility": "Age 16+. Open year-round. Priority given to students pursuing healthcare degrees.",
+      "deadline": "April 20, 2026",
+      "deadlineDate": "2026-04-20",
+      "how": "Apply at towerhealth.org/volunteering or visit the volunteer office at Phoenixville Hospital.",
+      "source": "towerhealth.org — Phoenixville Hospital",
+      "url": "https://www.towerhealth.org/volunteering/volunteer-opportunities",
+      "grades": [
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "Healthcare"
+      ]
+    },
+    {
+      "id": "i6",
+      "type": "internship",
+      "title": "Tower Health Clinical Internship",
+      "amount": "Paid · Part-Time",
+      "category": "Healthcare",
+      "desc": "Tower Health offers paid clinical internships for college students pursuing nursing, pre-med, or allied health programs. Chester County locations including Phoenixville.",
+      "eligibility": "College students enrolled in healthcare degree programs. Requires background check and health screening.",
+      "deadline": "Rolling",
+      "deadlineDate": "2026-08-01",
+      "how": "Apply at towerhealth.org/careers. Search for internship roles in Phoenixville/Chester County.",
+      "source": "towerhealth.org — Tower Health System",
+      "url": "https://www.towerhealth.org/careers",
+      "grades": [
+        "12th"
+      ],
+      "gpaMin": "3to35",
+      "interests": [
+        "Healthcare"
+      ]
+    },
+    {
+      "id": "i7",
+      "type": "internship",
+      "title": "Wawa Co-op & Scholarship Program",
+      "amount": "Hourly + Benefits",
+      "category": "Retail",
+      "desc": "Wawa, headquartered in Media PA, hires local high school and college students and offers a scholarship program for associates. Multiple Phoenixville-area locations.",
+      "eligibility": "Age 16+. Wawa associates and their dependents may qualify for the PFMA Ridge Scholarship.",
+      "deadline": "Rolling",
+      "deadlineDate": "2026-12-01",
+      "how": "Apply at wawa.com/careers or visit your local Wawa store directly.",
+      "source": "wawa.com — Multiple Phoenixville locations",
+      "url": "https://www.wawa.com/careers/search-apply",
+      "grades": [
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "Retail",
+        "General"
+      ]
+    },
+    {
+      "id": "i8",
+      "type": "internship",
+      "title": "Exelon STEM Academy — Young Women",
+      "amount": "FREE · Residential · iPad included",
+      "category": "STEM Programs",
+      "desc": "A free, week-long residential STEM program for young women in 10th or 11th grade from the PECO service area, which explicitly includes Chester County. Hosted at Saint Joseph's University. Participants get hands-on workshops with women in STEM, facility tours, and keep a free iPad.",
+      "eligibility": "Young women currently in 10th or 11th grade living in the PECO service area (Chester County qualifies). No cost to attend.",
+      "deadline": "Applications open December 2026",
+      "deadlineDate": "2026-12-01",
+      "how": "Apply at exelonstemacademy.org. Applications open each December for the following summer. Contact PAHS guidance to be notified.",
+      "source": "exelonstemacademy.org — PECO/Exelon Foundation",
+      "url": "https://www.exelonstemacademy.org",
+      "grades": [
+        "10th",
+        "11th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "STEM"
+      ]
+    },
+    {
+      "id": "i9",
+      "type": "internship",
+      "title": "Exelon Boys to STEM Academy",
+      "amount": "FREE · Residential · iPad included",
+      "category": "STEM Programs",
+      "desc": "A free, week-long residential STEM program for young men in 10th or 11th grade from the PECO service area (Chester County qualifies). Hosted at Saint Joseph's University. Includes climate and energy challenges, conversations with STEM leaders, and a free iPad.",
+      "eligibility": "Young men currently in 10th or 11th grade in the PECO service area. Chester County and Phoenixville-area students are eligible.",
+      "deadline": "Applications open December 2026",
+      "deadlineDate": "2026-12-01",
+      "how": "Apply at exelonstemacademy.org. Applications open each December. Check with PAHS counselor or bookmark the site.",
+      "source": "exelonstemacademy.org — PECO/Exelon Foundation",
+      "url": "https://www.exelonstemacademy.org",
+      "grades": [
+        "10th",
+        "11th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "STEM"
+      ]
+    },
+    {
+      "id": "i10",
+      "type": "internship",
+      "title": "Main Line Health Student Externship",
+      "amount": "Unpaid · Academic Credit",
+      "category": "Healthcare",
+      "desc": "Main Line Health offers structured externships for high school and college students interested in healthcare. Shadow real clinicians at facilities throughout Chester County.",
+      "eligibility": "Students age 16+ interested in healthcare careers. High school juniors and seniors preferred.",
+      "deadline": "May 1, 2026",
+      "deadlineDate": "2026-05-01",
+      "how": "Apply at mainlinehealth.org/careers/students. Requires health screenings and a brief interview.",
+      "source": "mainlinehealth.org — Main Line Health",
+      "url": "https://www.mainlinehealth.org",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "gpaMin": "below3",
+      "interests": [
+        "Healthcare"
+      ]
+    }
+  ],
+  "universityPrograms": [
+    {
+      "id": "u1",
+      "type": "university",
+      "title": "Villanova Pre-College Summer Academy",
+      "amount": "$6,000–$8,000",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "College Credit"
+      ],
+      "desc": "Four-week residential or commuter program on Villanova's campus for rising 10th–12th graders. Earn 4 real college credits taught by Villanova faculty alongside current undergrads.",
+      "eligibility": "Rising 10th, 11th, and 12th graders. Commuter ($6,000) or residential ($8,000). Financial aid available for qualifying families.",
+      "deadline": "April 6, 2026",
+      "deadlineDate": "2026-04-06",
+      "how": "Apply at villanova.edu/summer. Requires transcript, parent permission letter, and a 250–500 word personal statement.",
+      "source": "villanova.edu — Villanova, PA (18 miles)",
+      "url": "https://www1.villanova.edu/university/summer-sessions/pre-college-summer-academy.html",
+      "grades": [
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u2",
+      "type": "university",
+      "title": "Villanova High School Scholar Program",
+      "amount": "Per-credit tuition",
+      "category": "College Credit",
+      "tags": [
+        "High School",
+        "College Credit"
+      ],
+      "desc": "Academically strong high schoolers can take individual college-level courses at Villanova each semester — fall, spring, or summer — and earn transferable college credits.",
+      "eligibility": "Current high school students (any grade). Students under 18 receive an approved course list. One 3-credit course per semester max.",
+      "deadline": "Rolling — contact CPS office",
+      "deadlineDate": "2026-08-01",
+      "how": "Apply at villanova.edu/summer. Contact CPS Admissions at cps.info@villanova.edu for the approved course list.",
+      "source": "villanova.edu — Villanova, PA (18 miles)",
+      "url": "https://www.villanova.edu/university/professional-studies/academics/degrees-certificates/admissions_hs_and_visiting_students.html",
+      "grades": [
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u3",
+      "type": "university",
+      "title": "West Chester University Dual Enrollment",
+      "amount": "Reduced tuition (PA state rates)",
+      "category": "College Credit",
+      "tags": [
+        "High School",
+        "College Credit"
+      ],
+      "desc": "WCU's Dual Enrollment Partnership lets Chester County high schoolers take real WCU courses and earn college credit — taught by WCU faculty, often at an off-campus Graduate Center near you.",
+      "eligibility": "High school students at WCU partner schools. PASD students should ask their counselor if Phoenixville Area is a partner. GPA requirements apply per course.",
+      "deadline": "Rolling — check with PAHS counselor",
+      "deadlineDate": "2026-09-01",
+      "how": "Contact your PAHS guidance counselor first. Then register at wcupa.edu/dualenrollment or call 610-436-3411.",
+      "source": "wcupa.edu — West Chester, PA (12 miles)",
+      "url": "https://www.wcupa.edu/_admin/dualEnrollment/",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u4",
+      "type": "university",
+      "title": "TCHS Pickering CTE Programs",
+      "amount": "Free (part of public school)",
+      "category": "Free / Low Cost",
+      "tags": [
+        "High School",
+        "STEM",
+        "Free"
+      ],
+      "desc": "Chester County Technical College High School – Pickering Campus is right in Phoenixville and serves PASD students in grades 10–12. Programs include healthcare (clinicals at Phoenixville Hospital!), engineering, IT, and more — all earning college credit through SOAR.",
+      "eligibility": "PASD students in grades 10–12. Apply through PAHS. All programs are free as part of your public high school education.",
+      "deadline": "Apply for next year — check with PAHS",
+      "deadlineDate": "2026-04-01",
+      "how": "Talk to your PAHS guidance counselor. Applications for the following year are typically due in spring. Visit cciu.org/tchs for program details.",
+      "source": "cciu.org/tchs — Phoenixville, PA (on campus)",
+      "url": "https://www.cciu.org/programs/career-and-technolgy-programs",
+      "grades": [
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u5",
+      "type": "university",
+      "title": "Temple Summer Academy",
+      "amount": "~$3,500–$5,000",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "Arts",
+        "STEM"
+      ],
+      "desc": "Four-week pre-college residential program on Temple's Main Campus in Philadelphia for rising 11th and 12th graders. Earn one college-level credit while exploring subjects across Temple's schools — from engineering to film to business.",
+      "eligibility": "Rising 11th and 12th graders. Residential and commuter options available. Applications open December 2025, priority deadline March 1, 2026.",
+      "deadline": "May 1, 2026 (priority: March 1)",
+      "deadlineDate": "2026-05-01",
+      "how": "Apply at admissions.temple.edu/summer/pre-college. Priority given to applications received before March 1.",
+      "source": "temple.edu — Philadelphia, PA (30 miles)",
+      "url": "https://admissions.temple.edu/summer/pre-college/find-your-program/interdisciplinary-programs/summer-academy",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u6",
+      "type": "university",
+      "title": "Temple Summer Institutes & Intensives",
+      "amount": "~$1,500–$2,500",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "STEM",
+        "Arts"
+      ],
+      "desc": "Two-week focused workshops at Temple covering topics like engineering, science, arts, business, and more. Less time commitment than the full Academy — great for students wanting to try a specific subject area.",
+      "eligibility": "High school students. Various programs serve different grade levels. Applications open December 2025.",
+      "deadline": "May 1, 2026",
+      "deadlineDate": "2026-05-01",
+      "how": "Browse all programs at admissions.temple.edu/summer/pre-college and select the institute that matches your interest.",
+      "source": "temple.edu — Philadelphia, PA (30 miles)",
+      "url": "https://admissions.temple.edu/summer/pre-college/find-your-program/interdisciplinary-programs/summer-institutes-and-intensives",
+      "grades": [
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u7",
+      "type": "university",
+      "title": "Drexel University Summer Programs (High School)",
+      "amount": "Varies by program",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "STEM",
+        "Arts"
+      ],
+      "desc": "Drexel offers competitive summer programs for high schoolers including a Neuroscience Camp (run by Drexel College of Medicine), Camp Business, and STEM/arts institutes. Located in Philadelphia — about 30 miles from Phoenixville.",
+      "eligibility": "Mostly rising juniors and seniors, some open to rising sophomores. Applications typically open in December.",
+      "deadline": "Rolling (apply early — programs fill fast)",
+      "deadlineDate": "2026-05-15",
+      "how": "Visit drexel.edu/undergrad/admissions/summer-programs for the current list of offerings.",
+      "source": "drexel.edu — Philadelphia, PA (30 miles)",
+      "url": "https://drexel.edu/undergrad/admissions/summer-programs",
+      "grades": [
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u8",
+      "type": "university",
+      "title": "Penn GEMS — UPenn Engineering (Middle School)",
+      "amount": "Varies (financial aid available)",
+      "category": "Middle School",
+      "tags": [
+        "Middle School",
+        "STEM",
+        "Free"
+      ],
+      "desc": "A one-week engineering and STEM program hosted on Penn's campus for rising 7th–9th graders within 60 miles of campus (Phoenixville qualifies!). Students rotate through bioengineering, robotics, AI, and materials science workshops with Penn faculty and researchers.",
+      "eligibility": "Rising 7th, 8th, and 9th graders who live and attend school within 60 miles of Penn's campus. Phoenixville (19460) is within range.",
+      "deadline": "Spring 2026 — check Penn GEMS website",
+      "deadlineDate": "2026-04-15",
+      "how": "Search \"Penn GEMS\" at seas.upenn.edu. Financial assistance is available for qualifying families.",
+      "source": "seas.upenn.edu — Philadelphia, PA (28 miles)",
+      "url": "https://www.seas.upenn.edu/prospective-students/pre-college/",
+      "grades": [
+        "7th",
+        "8th",
+        "9th"
+      ],
+      "level": "Middle School"
+    },
+    {
+      "id": "u9",
+      "type": "university",
+      "title": "Drexel Young Dragons STEAM (Middle School)",
+      "amount": "FREE",
+      "category": "Middle School",
+      "tags": [
+        "Middle School",
+        "STEM",
+        "Free",
+        "Arts"
+      ],
+      "desc": "A free summer STEAM program run out of Drexel's ExCITe Center for middle schoolers. Each week focuses on a different STEAM theme combining science, engineering, and art. Project-based and challenge-driven — not just lectures.",
+      "eligibility": "Middle school students. Summer cohort is 2 intensive weeks (weekdays); spring cohort is 10 weekends.",
+      "deadline": "Spring 2026 — check Drexel ExCITe Center",
+      "deadlineDate": "2026-04-01",
+      "how": "Visit drexel.edu/excite or search \"Young Dragons Drexel\" for the 2026 application.",
+      "source": "drexel.edu/excite — Philadelphia, PA (30 miles)",
+      "url": "https://drexel.edu/excite/engagement/young-dragons/",
+      "grades": [
+        "6th",
+        "7th",
+        "8th"
+      ],
+      "level": "Middle School"
+    },
+    {
+      "id": "u10",
+      "type": "university",
+      "title": "Temple Ambler Middle School Summer Programs",
+      "amount": "Affordable (check website)",
+      "category": "Middle School",
+      "tags": [
+        "Middle School",
+        "STEM"
+      ],
+      "desc": "Temple's Ambler campus (just 15 miles from Phoenixville) runs focused middle school summer tracks including SeaPerch Robotics (build underwater robots!), Green Thumb Academy (plant science), and space/materials science. Hands-on and project-specific.",
+      "eligibility": "Middle school students. Various tracks available. Held at Temple's Ambler campus in Fort Washington, PA.",
+      "deadline": "Spring 2026 — check Temple Ambler",
+      "deadlineDate": "2026-05-01",
+      "how": "Visit ambler.temple.edu or search \"Temple Ambler summer programs\" for current 2026 offerings.",
+      "source": "ambler.temple.edu — Ambler, PA (15 miles)",
+      "url": "https://ambler.temple.edu/programs/continuing-education/youth-programs",
+      "grades": [
+        "6th",
+        "7th",
+        "8th"
+      ],
+      "level": "Middle School"
+    },
+    {
+      "id": "u11",
+      "type": "university",
+      "title": "iD Tech STEM Camp at Villanova",
+      "amount": "~$1,200–$1,800/week",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "Middle School",
+        "STEM"
+      ],
+      "desc": "Week-long tech and coding camps held right on Villanova's campus for ages 7–18. Topics include coding, game design, Minecraft, robotics, 3D printing, and AI. Great for middle and high schoolers wanting hands-on tech skills in a fun setting.",
+      "eligibility": "Ages 7–18 (middle and high school). Day camp and overnight options. Programs run throughout the summer.",
+      "deadline": "Rolling — register early, programs sell out",
+      "deadlineDate": "2026-08-01",
+      "how": "Register at idtech.com/villanova. Discounts available for early registration and siblings.",
+      "source": "idtech.com — Villanova, PA (18 miles)",
+      "url": "https://www.idtech.com/locations/pennsylvania-summer-camps/villanova-university",
+      "grades": [
+        "6th",
+        "7th",
+        "8th",
+        "9th",
+        "10th",
+        "11th"
+      ],
+      "level": "Middle School"
+    },
+    {
+      "id": "u12",
+      "type": "university",
+      "title": "Villanova AAP Summer Bridge (Incoming Freshmen)",
+      "amount": "FREE — room, board & materials included",
+      "category": "Free / Low Cost",
+      "tags": [
+        "High School",
+        "Free",
+        "College Credit"
+      ],
+      "desc": "The Academic Advancement Program offers a FREE 5-week residential summer experience at Villanova for admitted freshmen who would benefit from extra academic and financial support. Room, board, course materials, and all activities included — zero cost to participants.",
+      "eligibility": "Newly admitted Villanova freshmen from PA, NJ, NY, DE, MD, or DC who qualify through the AAP selection process. Based on transcripts, essays, and family income.",
+      "deadline": "June 2026 — AAP application reopens June 2026",
+      "deadlineDate": "2026-06-26",
+      "how": "Apply to Villanova through regular admissions and indicate interest in AAP. Email Marquis Coates at Villanova for details.",
+      "source": "villanova.edu/casa — Villanova, PA (18 miles)",
+      "url": "https://www1.villanova.edu/university/academic-enterprise/student-support/casa/programs.html",
+      "grades": [
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u13",
+      "type": "university",
+      "title": "Pitt Experiencing Architecture Program",
+      "amount": "FREE",
+      "category": "Free / Low Cost",
+      "tags": [
+        "High School",
+        "Arts",
+        "Free"
+      ],
+      "desc": "A free 3-week summer studio at the University of Pittsburgh for high schoolers interested in architecture, art, design, and urban studies. Use Pitt's architecture studios and maker spaces, build a design portfolio, and visit real construction sites with practicing architects.",
+      "eligibility": "High school students interested in architecture, art, or design. Program is completely free. Applications open February 2, 2026 and close April 3, 2026.",
+      "deadline": "April 3, 2026",
+      "deadlineDate": "2026-04-03",
+      "how": "Apply at arch.pitt.edu. Program runs July 6–26, 2026, Monday–Friday 9am–3pm on Pitt's Pittsburgh campus.",
+      "source": "arch.pitt.edu — University of Pittsburgh",
+      "url": "https://www.arch.pitt.edu/experiencing-architecture-program",
+      "grades": [
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u14",
+      "type": "university",
+      "title": "Pitt AI Summer School (HexAI Lab)",
+      "amount": "Free (check website)",
+      "category": "STEM",
+      "tags": [
+        "High School",
+        "STEM",
+        "Free"
+      ],
+      "desc": "A week-long AI and medical imaging program run by Pitt's HexAI Research Laboratory. Grades 11–12 students dive into machine learning, deep learning, and AI applications in healthcare and pathology alongside Pitt researchers.",
+      "eligibility": "High school students in grades 11 and 12. Also open to community college students. Registration for 2026 opened March 5, 2026.",
+      "deadline": "Check pitthexai.github.io for 2026 dates",
+      "deadlineDate": "2026-05-01",
+      "how": "Register at pitthexai.github.io/AISummerSchool. Program typically held in June, 9am–3pm on Pitt's campus.",
+      "source": "pitthexai.github.io — University of Pittsburgh HexAI Lab",
+      "url": "https://pitthexai.github.io/AISummerSchool/",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u15",
+      "type": "university",
+      "title": "UPMC Hillman Cancer Center Academy",
+      "amount": "FREE — paid research stipend",
+      "category": "Free / Low Cost",
+      "tags": [
+        "High School",
+        "STEM",
+        "Healthcare",
+        "Free"
+      ],
+      "desc": "An 8-week immersive summer research program at the University of Pittsburgh and UPMC for rising high school seniors. Students are placed in a real research lab working on cancer biology, computational biology, immunology, or surgery. Includes mentorship, lectures, and a final poster presentation.",
+      "eligibility": "Rising high school seniors (between 10th–11th or 11th–12th grade), at least 16 years old by program start. Students come from both local Pittsburgh area and across the country.",
+      "deadline": "Spring 2026 — check hillmanresearch.upmc.edu",
+      "deadlineDate": "2026-03-31",
+      "how": "Apply at hillmanresearch.upmc.edu/training/high-school-undergrad. Highly competitive — apply early.",
+      "source": "hillmanresearch.upmc.edu — UPMC Hillman Cancer Center, Pittsburgh",
+      "url": "https://hillmanresearch.upmc.edu/training/high-school-undergrad",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u16",
+      "type": "university",
+      "title": "Pitt Summer Sessions for High Schoolers",
+      "amount": "Per-credit college tuition",
+      "category": "College Credit",
+      "tags": [
+        "High School",
+        "College Credit"
+      ],
+      "desc": "High school students can take real Pitt college courses during summer sessions at the Kenneth P. Dietrich School of Arts & Sciences — covering everything from neuroscience to foreign languages, ecology, and business. Credits are transferable to most colleges.",
+      "eligibility": "Current high school students. Strong academic record required. Online and in-person options available.",
+      "deadline": "Rolling — apply by May for summer sessions",
+      "deadlineDate": "2026-05-01",
+      "how": "Email summer@as.pitt.edu or visit pitt.edu/summer. Request the high school guest student application.",
+      "source": "as.pitt.edu — University of Pittsburgh, Dietrich School",
+      "url": "https://www.as.pitt.edu/undergraduate/academic-resources/summer-sessions",
+      "grades": [
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u17",
+      "type": "university",
+      "title": "NYU Precollege Summer Program",
+      "amount": "$2,579/course + optional housing",
+      "category": "College Credit",
+      "tags": [
+        "High School",
+        "College Credit",
+        "STEM",
+        "Arts"
+      ],
+      "desc": "Spend 6 weeks at NYU taking real undergraduate courses taught by NYU faculty — earn up to 8 transferable college credits. Choose from 38+ courses in STEM, arts, business, journalism, humanities, and more. Includes College 101 workshops on admissions, financial aid, and essay writing. On-campus housing available.",
+      "eligibility": "Rising 11th and 12th graders with a minimum 3.0 GPA. International students welcome. Applications open on a rolling basis from February 1.",
+      "deadline": "May 1, 2026 (housing deadline) · June 12, 2026 (final)",
+      "deadlineDate": "2026-05-01",
+      "how": "Apply at nyu.edu/precollege. $50 non-refundable application fee. International/scholarship deadline is March 15.",
+      "source": "nyu.edu/precollege — New York University, NYC",
+      "url": "https://www.nyu.edu/admissions/high-school-and-middle-school-programs/high-school-programs/nyu-precollege.html",
+      "grades": [
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u18",
+      "type": "university",
+      "title": "NYU Tisch Summer High School Program",
+      "amount": "~$6,000–$8,000",
+      "category": "Arts",
+      "tags": [
+        "High School",
+        "Arts"
+      ],
+      "desc": "A prestigious 4-week residential arts program at NYU's Tisch School of the Arts each July for high school sophomores and juniors. Study dance, drama, production & design, dramatic writing, game design, photography, and more alongside top Tisch faculty in New York City.",
+      "eligibility": "High school sophomores and juniors. Residential program — students live on NYU's campus. Notifications for Summer 2026 have already been released.",
+      "deadline": "Applications for 2026 closed — bookmark for 2027",
+      "deadlineDate": "2026-07-31",
+      "how": "Visit tisch.nyu.edu/special-programs/high-school-programs. Applications typically open in fall for the following summer.",
+      "source": "tisch.nyu.edu — NYU Tisch School of the Arts, NYC",
+      "url": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school.html",
+      "grades": [
+        "10th",
+        "11th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u19",
+      "type": "university",
+      "title": "NYU High School Academy — Career Edge",
+      "amount": "$2,579/course + optional housing",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "Arts",
+        "STEM"
+      ],
+      "desc": "NYU's career exploration program for high schoolers — non-credit but deeply immersive. Choose from tracks in digital photography, finance, game design, journalism, tech, and more. Field trips throughout NYC bring each subject to life. Great for students still exploring what they want to study in college.",
+      "eligibility": "Students who have completed grades 9, 10, or 11. Requires a 250–500 word essay and transcript. Commuter and residential options. Applications for Summer 2026 are now live.",
+      "deadline": "June 12, 2026 (commuter) · April 29, 2026 (residential)",
+      "deadlineDate": "2026-04-29",
+      "how": "Apply at sps.nyu.edu/high-school-academy. Program starts June 29, 2026. $50 application fee.",
+      "source": "sps.nyu.edu — NYU School of Professional Studies, NYC",
+      "url": "https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html",
+      "grades": [
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "High School"
+    },
+    {
+      "id": "u20",
+      "type": "university",
+      "title": "NYU Middle & High School Programs Hub",
+      "amount": "Varies by program",
+      "category": "High School",
+      "tags": [
+        "High School",
+        "Middle School",
+        "STEM",
+        "Arts"
+      ],
+      "desc": "NYU offers 50+ programs for students in grades 5–12 — from weekend workshops to 1–2 week intensives and full 6–12 week courses. Subjects span STEM, arts & media, business, humanities, and college prep. Both in-person on the NYC campus and fully online options are available year-round.",
+      "eligibility": "Students grades 5–12 depending on program. Wide range of eligibility requirements across programs.",
+      "deadline": "Varies by program — browse nyu.edu/highschool",
+      "deadlineDate": "2026-08-01",
+      "how": "Browse the full catalog at nyu.edu/admissions/high-school-and-middle-school-programs. Filter by grade, subject, and format.",
+      "source": "nyu.edu — New York University, NYC",
+      "url": "https://www.nyu.edu/admissions/high-school-and-middle-school-programs.html",
+      "grades": [
+        "6th",
+        "7th",
+        "8th",
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ],
+      "level": "Middle School"
+    }
+  ]
+}

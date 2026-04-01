@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Application Checklist — ScholarFind</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../shared.css"/>
+<!-- 
+  ============================================================
+  CHECKLIST PAGE — Ready to build out
+  
+  Planned features:
+  - Student saves a scholarship → checklist auto-created
+  - Checklist items: transcript, essay, recommendations, form
+  - Items are checkable — progress saved in localStorage
+  - Progress bar per scholarship
+  - Print-friendly view for parents
+  ============================================================
+-->
+<style>
+.checklist-card { background: var(--white); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--card-shadow); margin-bottom: 1rem; }
+.checklist-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.progress-bar { background: var(--light); border-radius: 99px; height: 6px; margin: 0.75rem 0; }
+.progress-fill { background: var(--teal); border-radius: 99px; height: 6px; transition: width 0.3s; }
+.checklist-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--light); font-size: 0.9rem; }
+.checklist-item:last-child { border-bottom: none; }
+.checklist-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--teal); cursor: pointer; }
+.checklist-item label { cursor: pointer; flex: 1; }
+.checklist-item.done label { text-decoration: line-through; color: var(--slate); }
+.coming-soon { text-align: center; padding: 3rem 2rem; color: var(--slate); }
+.coming-soon h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div>
+      <a class="logo" href="../index.html">Scholar<span>Find</span></a>
+      <div class="tagline">Chester County, PA · All Districts</div>
+    </div>
+  </div>
+</header>
+
+<nav class="page-nav">
+  <div class="page-nav-inner">
+    <a href="../index.html">🏆 Scholarships</a>
+    <a href="checklist.html" class="active">✅ My Checklist</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="quiz.html">🎯 Quiz</a>
+  </div>
+</nav>
+
+<main>
+  <div class="page-title">
+    <h1>✅ Application Checklist</h1>
+    <p>Track what you need for each scholarship — never miss a requirement</p>
+  </div>
+
+  <!-- COMING SOON PLACEHOLDER -->
+  <div class="coming-soon">
+    <span style="font-size:3rem;display:block;margin-bottom:1rem">📋</span>
+    <h2>Coming soon</h2>
+    <p>Save scholarships from the main page and your checklist will appear here automatically.</p>
+    <a href="../index.html" class="btn btn-teal" style="margin-top:1.5rem;display:inline-block">Browse Scholarships →</a>
+  </div>
+
+  <!--
+  SAMPLE OF WHAT IT WILL LOOK LIKE — uncomment when building out:
+
+  <div class="checklist-card">
+    <div class="checklist-title">Lenfest Scholarship</div>
+    <div style="font-size:0.82rem;color:var(--slate)">Due February 1, 2026 · Up to $12,000</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+    <div style="font-size:0.78rem;color:var(--slate);margin-bottom:0.75rem">3 of 5 complete</div>
+    <div class="checklist-item done">
+      <input type="checkbox" id="c1" checked/><label for="c1">Transcripts requested</label>
+    </div>
+    <div class="checklist-item done">
+      <input type="checkbox" id="c2" checked/><label for="c2">Personal statement drafted</label>
+    </div>
+    <div class="checklist-item done">
+      <input type="checkbox" id="c3" checked/><label for="c3">Recommendation from Mr. Smith confirmed</label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="c4"/><label for="c4">Recommendation from Ms. Jones confirmed</label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="c5"/><label for="c5">Online application submitted</label>
+    </div>
+  </div>
+  -->
+</main>
+
+</body>
+</html>

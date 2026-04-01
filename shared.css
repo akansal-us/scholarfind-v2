@@ -1,0 +1,78 @@
+/* ============================================================
+   ScholarFind — Shared Styles (Option B)
+   Used by all pages: index.html, checklist.html, calendar.html, quiz.html
+   ============================================================ */
+
+:root {
+  --navy: #0d1b2a;
+  --teal: #1a9e8f;
+  --gold: #f5c842;
+  --coral: #f4603a;
+  --cream: #fdf8f0;
+  --slate: #4a5568;
+  --light: #f0f4f8;
+  --white: #ffffff;
+  --success: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --card-shadow: 0 4px 24px rgba(13,27,42,0.10);
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); min-height: 100vh; }
+
+/* HEADER */
+header { background: var(--navy); padding: 0 2rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.2); }
+.header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: var(--white); letter-spacing: -0.5px; text-decoration: none; }
+.logo span { color: var(--gold); }
+.tagline { font-size: 0.78rem; color: #94a3b8; font-weight: 300; }
+
+/* NAV */
+.page-nav { background: var(--white); border-bottom: 2px solid var(--light); }
+.page-nav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; }
+.page-nav a { padding: 0.9rem 1.2rem; font-size: 0.88rem; font-weight: 500; color: var(--slate); text-decoration: none; border-bottom: 3px solid transparent; transition: all 0.2s; white-space: nowrap; }
+.page-nav a:hover { color: var(--teal); }
+.page-nav a.active { color: var(--teal); border-bottom-color: var(--teal); font-weight: 600; }
+
+/* MAIN */
+main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+/* PAGE HEADER */
+.page-title { margin-bottom: 1.5rem; }
+.page-title h1 { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 900; }
+.page-title p { color: var(--slate); margin-top: 0.3rem; }
+
+/* CARDS */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+.card { background: var(--white); border-radius: var(--radius); box-shadow: var(--card-shadow); overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: 1.5px solid transparent; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(13,27,42,0.15); border-color: var(--teal); }
+
+/* BUTTONS */
+.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem; cursor: pointer; font-family: 'DM Sans', sans-serif; border: none; transition: all 0.2s; text-decoration: none; }
+.btn-teal { background: var(--teal); color: white; }
+.btn-teal:hover { background: #158a7c; }
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: #e6b800; }
+.btn-outline { background: none; border: 1.5px solid var(--teal); color: var(--teal); }
+.btn-outline:hover { background: var(--teal); color: white; }
+
+/* BADGES */
+.badge { font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 50px; font-weight: 600; }
+.badge-cat { background: #e0f2fe; color: #0369a1; }
+.badge-urgent { background: #fee2e2; color: var(--danger); }
+.badge-soon { background: #fef9c3; color: #92400e; }
+.badge-ok { background: #dcfce7; color: #166534; }
+
+/* DISCLAIMER */
+.disclaimer-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--navy); color: #94a3b8; font-size: 0.75rem; padding: 0.5rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; z-index: 200; transition: transform 0.3s; }
+.disclaimer-bar.hidden { transform: translateY(100%); }
+.disclaimer-dismiss { background: none; border: 1px solid #334155; color: #94a3b8; padding: 0.2rem 0.7rem; border-radius: 50px; font-size: 0.72rem; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  main { padding: 1.2rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .tagline { display: none; }
+}
