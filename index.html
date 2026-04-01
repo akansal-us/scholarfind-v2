@@ -6,6 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ4BZDPPJQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EJ4BZDPPJQ');
+</script>
 <title>ScholarFind — Chester County PA</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -132,6 +140,23 @@ main{max-width:1200px;margin:0 auto;padding:2rem}
 .disclaimer-bar a{color:var(--gold);text-decoration:none;font-weight:600}
 .disclaimer-dismiss{background:none;border:1px solid #334155;color:#94a3b8;padding:0.2rem 0.7rem;border-radius:50px;font-size:0.72rem;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;flex-shrink:0}
 .disclaimer-dismiss:hover{background:#1e293b}
+
+/* EMAIL SIGNUP */
+.email-signup-card{background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 100%);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;color:white}
+.email-signup-card h3{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--gold);margin-bottom:0.3rem}
+.email-signup-card p{font-size:0.84rem;color:#94a3b8;margin-bottom:1rem;line-height:1.5}
+.email-prefs{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem}
+.email-pref{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:#cbd5e1;cursor:pointer}
+.email-pref input{accent-color:var(--gold);width:15px;height:15px}
+.email-input-row{display:flex;gap:0.5rem;flex-wrap:wrap}
+.email-input-row input{flex:1;min-width:200px;border:1.5px solid #334155;background:#1e293b;color:white;padding:0.65rem 1rem;border-radius:8px;font-size:0.9rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s}
+.email-input-row input:focus{border-color:var(--gold)}
+.email-input-row input::placeholder{color:#64748b}
+.email-sub-btn{background:var(--gold);color:var(--navy);border:none;padding:0.65rem 1.4rem;border-radius:8px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.9rem;white-space:nowrap;transition:background 0.2s}
+.email-sub-btn:hover{background:#e6b800}
+.email-sub-btn:disabled{background:#475569;color:#94a3b8;cursor:not-allowed}
+.email-success{background:#065f46;border-radius:8px;padding:0.75rem 1rem;font-size:0.85rem;color:#6ee7b7;margin-top:0.75rem;display:none}
+.email-error{background:#7f1d1d;border-radius:8px;padding:0.75rem 1rem;font-size:0.85rem;color:#fca5a5;margin-top:0.75rem;display:none}
 
 /* FILTER BAR */
 .filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
@@ -491,6 +516,24 @@ main{max-width:1200px;margin:0 auto;padding:2rem}
 <!-- SAVED TAB -->
 <div class="section" id="tab-saved">
   <div class="tab-header"><h2>⭐ Saved Items</h2><p>Scholarships and programs you've bookmarked · <span style="color:var(--warn)">⚠️ Stored on this device only</span></p></div>
+
+  <!-- EMAIL SIGNUP -->
+  <div class="email-signup-card" id="email-signup-card">
+    <h3>📬 Get deadline reminders by email</h3>
+    <p>We'll email you 7 days before saved scholarship deadlines, plus a monthly digest of new opportunities added to the site.</p>
+    <div class="email-prefs">
+      <label class="email-pref"><input type="checkbox" id="pref-deadlines" checked/> 7-day deadline reminders</label>
+      <label class="email-pref"><input type="checkbox" id="pref-digest" checked/> Monthly new scholarships digest</label>
+      <label class="email-pref"><input type="checkbox" id="pref-new" checked/> Alerts when new scholarships are added</label>
+    </div>
+    <div class="email-input-row">
+      <input type="email" id="reminder-email" placeholder="your@email.com"/>
+      <button class="email-sub-btn" id="email-sub-btn" onclick="subscribeEmail()">Notify me →</button>
+    </div>
+    <div class="email-success" id="email-success">✅ You're signed up! Watch your inbox for reminders.</div>
+    <div class="email-error" id="email-error">Something went wrong — please try again or email us directly.</div>
+  </div>
+
   <div id="saved-grid-wrap">
     <div class="cards-grid" id="saved-grid"></div>
     <div class="saved-empty hidden" id="saved-empty">
@@ -1639,6 +1682,57 @@ function resetQuiz() {
     const pip = document.getElementById('pip-' + i);
     pip.className = 'quiz-pip' + (i === 0 ? ' active' : '');
   }
+}
+
+// ============================================================
+// EMAIL SIGNUP
+// ============================================================
+async function subscribeEmail() {
+  const email = document.getElementById('reminder-email').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('email-error').style.display = 'block';
+    document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+    return;
+  }
+  const btn = document.getElementById('email-sub-btn');
+  btn.disabled = true;
+  btn.textContent = 'Signing up…';
+
+  const prefs = {
+    deadlines: document.getElementById('pref-deadlines').checked,
+    digest: document.getElementById('pref-digest').checked,
+    newScholarships: document.getElementById('pref-new').checked,
+    savedItems: savedItems,
+    district: currentDistrict
+  };
+
+  try {
+    const response = await fetch('/.netlify/functions/email-signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, prefs })
+    });
+    if (response.ok) {
+      document.getElementById('email-success').style.display = 'block';
+      document.getElementById('email-error').style.display = 'none';
+      document.getElementById('reminder-email').value = '';
+      btn.textContent = 'Signed up ✓';
+      localStorage.setItem('sf_email_subscribed', '1');
+    } else {
+      throw new Error('Server error');
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Notify me →';
+    document.getElementById('email-error').style.display = 'block';
+    document.getElementById('email-success').style.display = 'none';
+  }
+}
+
+// Hide signup card if already subscribed
+if (localStorage.getItem('sf_email_subscribed')) {
+  const card = document.getElementById('email-signup-card');
+  if (card) card.style.display = 'none';
 }
 
 // ============================================================
