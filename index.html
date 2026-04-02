@@ -256,6 +256,7 @@ main{max-width:1200px;margin:0 auto;padding:2rem}
 .quiz-no-match{text-align:center;padding:2rem;color:var(--slate)}
 .quiz-no-match span{font-size:2.5rem;display:block;margin-bottom:0.75rem}
 
+
 /* SAVED */
 .saved-empty{text-align:center;padding:4rem 2rem;color:var(--slate)}
 .saved-empty span{font-size:3rem;display:block;margin-bottom:1rem}
@@ -263,6 +264,24 @@ main{max-width:1200px;margin:0 auto;padding:2rem}
 
 /* WARNING BANNER */
 .warn-banner{font-size:0.78rem;color:#92400e;margin-bottom:1rem;padding:0.4rem 0.8rem;background:#fef9c3;border-radius:6px;border-left:3px solid #f59e0b;line-height:1.5}
+
+/* WELCOME MODAL */
+.welcome-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,0.7);z-index:2000;align-items:center;justify-content:center;padding:1rem}
+.welcome-overlay.open{display:flex}
+.welcome-modal{background:var(--white);border-radius:20px;max-width:520px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);overflow:hidden}
+.welcome-header{background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 100%);padding:1.8rem;text-align:center}
+.welcome-header h2{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--white);margin-bottom:0.3rem}
+.welcome-header p{color:#94a3b8;font-size:0.88rem}
+.welcome-body{padding:1.5rem}
+.welcome-features{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem}
+.welcome-feature{background:var(--cream);border-radius:10px;padding:0.9rem;border:1.5px solid var(--light)}
+.welcome-feature-icon{font-size:1.4rem;margin-bottom:0.3rem}
+.welcome-feature-title{font-weight:700;font-size:0.88rem;margin-bottom:0.2rem}
+.welcome-feature-desc{font-size:0.78rem;color:var(--slate);line-height:1.4}
+.welcome-tip{background:#f0fdf9;border:1.5px solid var(--teal);border-radius:10px;padding:0.8rem 1rem;font-size:0.82rem;color:#0f6e56;margin-bottom:1.2rem;line-height:1.5}
+.welcome-btn{width:100%;background:var(--teal);color:white;border:none;padding:0.9rem;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s}
+.welcome-btn:hover{background:#158a7c}
+@media(max-width:500px){.welcome-features{grid-template-columns:1fr}}
 
 /* HIDDEN */
 .hidden{display:none!important}
@@ -338,17 +357,63 @@ main{max-width:1200px;margin:0 auto;padding:2rem}
   <button class="tab-btn" onclick="switchTab('saved',this);closeDrawer()">⭐ Saved (<span id="saved-count-mobile">0</span>)</button>
 </div>
 
+<!-- WELCOME MODAL -->
+<div class="welcome-overlay" id="welcome-overlay">
+  <div class="welcome-modal">
+    <div class="welcome-header">
+      <h2>Welcome to Scholar<span style="color:var(--gold)">Find</span></h2>
+      <p>Chester County's free scholarship & opportunities finder</p>
+    </div>
+    <div class="welcome-body">
+      <div class="welcome-features">
+        <div class="welcome-feature">
+          <div class="welcome-feature-icon">🏆</div>
+          <div class="welcome-feature-title">Scholarships</div>
+          <div class="welcome-feature-desc">Real, verified local awards with direct apply links</div>
+        </div>
+        <div class="welcome-feature">
+          <div class="welcome-feature-icon">💼</div>
+          <div class="welcome-feature-title">Internships</div>
+          <div class="welcome-feature-desc">Paid opportunities within 15 miles of your district</div>
+        </div>
+        <div class="welcome-feature">
+          <div class="welcome-feature-icon">🎓</div>
+          <div class="welcome-feature-title">University Programs</div>
+          <div class="welcome-feature-desc">Summer programs for grades 6–12 at nearby universities</div>
+        </div>
+        <div class="welcome-feature">
+          <div class="welcome-feature-icon">🎯</div>
+          <div class="welcome-feature-title">Eligibility Quiz</div>
+          <div class="welcome-feature-desc">5 quick questions to find scholarships you qualify for</div>
+        </div>
+        <div class="welcome-feature">
+          <div class="welcome-feature-icon">📅</div>
+          <div class="welcome-feature-title">Deadline Tracker</div>
+          <div class="welcome-feature-desc">Countdowns so nothing slips through the cracks</div>
+        </div>
+        <div class="welcome-feature">
+          <div class="welcome-feature-icon">⭐</div>
+          <div class="welcome-feature-title">Save & Track</div>
+          <div class="welcome-feature-desc">Bookmark anything and get email reminders</div>
+        </div>
+      </div>
+      <div class="welcome-tip">💡 <strong>Start here:</strong> Select your Chester County school district at the top, then browse scholarships relevant to your area.</div>
+      <button class="welcome-btn" onclick="closeWelcome()">Let's find scholarships →</button>
+    </div>
+  </div>
+</div>
+
 <div class="hero">
   <h1>Find <span>Scholarships</span> &amp; Opportunities</h1>
   <p>Real, verified opportunities for Chester County students · Select your school district below</p>
-
 </div>
 
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat"><div class="stat-val" id="stat-scholarships">10</div><div class="stat-lbl">Scholarships</div></div>
-    <div class="stat"><div class="stat-val" id="stat-money">$100K+</div><div class="stat-lbl">Available</div></div>
-    <div class="stat"><div class="stat-val" id="stat-internships">10</div><div class="stat-lbl">Internships</div></div>
+    <div class="stat"><div class="stat-val" id="stat-scholarships">12</div><div class="stat-lbl">Scholarships</div></div>
+    <div class="stat"><div class="stat-val" id="stat-money">$600K+</div><div class="stat-lbl">Available</div></div>
+    <div class="stat"><div class="stat-val" id="stat-internships">15</div><div class="stat-lbl">Internships</div></div>
+    <div class="stat"><div class="stat-val">23</div><div class="stat-lbl">Uni Programs</div></div>
     <div class="stat"><div class="stat-val" id="stat-deadline">Mar 31</div><div class="stat-lbl">Next Deadline</div></div>
   </div>
 </div>
@@ -512,6 +577,8 @@ main{max-width:1200px;margin:0 auto;padding:2rem}
   </div>
   <div class="cards-grid" id="uni-grid"></div>
 </div>
+
+
 
 <!-- SAVED TAB -->
 <div class="section" id="tab-saved">
@@ -741,6 +808,40 @@ const scholarships = [
     grades:['11th','12th'],
     gpaMin:'35plus',
     interests:['STEM','General']
+  }  ,
+  {
+    id:'s11', type:'scholarship',
+    title:'Lockheed Martin STEM Scholarship',
+    amount:'Up to $10,000',
+    amountNum:10000,
+    category:'STEM',
+    desc:'Lockheed Martin, with facilities in the Philadelphia region, offers STEM scholarships for high school seniors pursuing engineering, computer science, or related fields. Chester County students are eligible. Lockheed also runs a separate high school internship program — scholarship and internship can be pursued independently.',
+    eligibility:'High school seniors pursuing STEM degrees. Strong academic record required. U.S. citizenship required.',
+    deadline:'Check lockheedmartin.com for 2026-27 cycle',
+    deadlineDate: new Date('2026-10-01'),
+    how:'Visit lockheedmartin.com/en-us/careers/candidates/students-early-careers/high-school.html for current scholarship and internship openings.',
+    source:'lockheedmartin.com — Lockheed Martin',
+    url:'https://www.lockheedmartin.com/en-us/careers/candidates/students-early-careers/high-school.html',
+    grades:['12th'],
+    gpaMin:'35plus',
+    interests:['STEM']
+  },
+  {
+    id:'s12', type:'scholarship',
+    title:'Comcast NBCUniversal RISE Scholarship',
+    amount:'Up to $5,000',
+    amountNum:5000,
+    category:'STEM',
+    desc:'Comcast, headquartered in Philadelphia and with major operations throughout the region, awards scholarships to students pursuing technology, media, or business degrees. Chester County students within the Comcast service area are eligible. Comcast also hires local high school interns in West Chester and surrounding areas.',
+    eligibility:'High school seniors pursuing technology, business, or media degrees. Strong community involvement preferred.',
+    deadline:'Rolling — check comcast.com/rise for current cycle',
+    deadlineDate: new Date('2026-12-01'),
+    how:'Search Comcast RISE Scholarship at comcast.com or corporate.comcast.com/values/education.',
+    source:'comcast.com — Comcast, Philadelphia region',
+    url:'https://corporate.comcast.com/values/education',
+    grades:['12th'],
+    gpaMin:'3to35',
+    interests:['STEM','General']
   }
 ];
 
@@ -904,6 +1005,86 @@ const internships = [
     grades:['11th','12th'],
     gpaMin:'below3',
     interests:['Healthcare']
+  }  ,
+  {
+    id:'i11', type:'internship',
+    title:'GSK Electromechanical Apprentice Program',
+    amount:'Paid · Full-time · Degree funded',
+    category:'STEM',
+    desc:'GSK offers a 3-4 year paid apprenticeship for high school graduates at its Upper Merion facility (King of Prussia, 8 miles from Phoenixville). Work full-time in biopharmaceutical manufacturing while earning a fully funded Associate degree in Engineering Science at Montgomery County Community College.',
+    eligibility:'High school graduates by June 2026 with 2.5+ GPA and algebra/geometry credits. Must be able to work full time at Upper Merion, PA facility.',
+    deadline:'Rolling — check gsk.com/apprentices for 2026 openings',
+    deadlineDate: new Date('2026-08-01'),
+    how:'Search #ApprenticeUS2026 at gsk.com/en-us/careers/early-careers/apprentices. Apply early — recruitment is ongoing and positions fill fast.',
+    source:'gsk.com — GSK Upper Merion, King of Prussia PA (8 miles)',
+    url:'https://us.gsk.com/en-us/careers/early-careers/apprentices/',
+    grades:['12th'],
+    gpaMin:'3to35',
+    interests:['STEM','Healthcare']
+  },
+  {
+    id:'i12', type:'internship',
+    title:'Monell Science Apprenticeship Program',
+    amount:'Paid weekly stipend',
+    category:'STEM Programs',
+    desc:'A prestigious 7-week paid summer research internship at the Monell Chemical Senses Center in Philadelphia for high school students from the greater Philadelphia area. Work directly alongside scientists on real biomedical research projects in neuroscience, chemistry, and data analysis. Named one of the top 25 pre-college science programs nationally.',
+    eligibility:'High school students (grade 9+) from the greater Philadelphia area including Chester County. Strong interest in science required — no prior research experience needed. Applications due December 31.',
+    deadline:'December 31, 2026 (for Summer 2027)',
+    deadlineDate: new Date('2026-12-31'),
+    how:'Apply at monell.org/science-apprenticeship-applications. Requires personal statement, one teacher recommendation, and transcript. Decisions by April 1.',
+    source:'monell.org — Monell Chemical Senses Center, Philadelphia PA (28 miles)',
+    url:'https://monell.org/science-apprenticeship-program/',
+    grades:['9th','10th','11th','12th'],
+    gpaMin:'3to35',
+    interests:['STEM','Healthcare']
+  },
+  {
+    id:'i13', type:'internship',
+    title:'Penn AEOP High School Internship (GRASP Lab)',
+    amount:'Free · Research experience',
+    category:'STEM Programs',
+    desc:'A 7-week summer research program at the University of Pennsylvania\'s GRASP Lab (General Robotics, Automation, Sensing & Perception) for rising high school juniors and seniors. Work on real robotics and AI research projects alongside Penn graduate students and faculty. One of the most selective STEM experiences in the Philadelphia region.',
+    eligibility:'Rising juniors and seniors (currently in 10th and 11th grade) who are US citizens or permanent residents. Strong STEM interest required.',
+    deadline:'May 16, 2026',
+    deadlineDate: new Date('2026-05-16'),
+    how:'Apply at diversity.seas.upenn.edu/aeop-high-school-internship-program. Program runs June 20 – August 5, 2026.',
+    source:'seas.upenn.edu — University of Pennsylvania, Philadelphia PA (28 miles)',
+    url:'https://diversity.seas.upenn.edu/aeop-high-school-internship-program/',
+    grades:['11th','12th'],
+    gpaMin:'35plus',
+    interests:['STEM']
+  },
+  {
+    id:'i14', type:'internship',
+    title:'Pennsylvania Governor\'s School for the Sciences',
+    amount:'FREE · Residential · Fully funded',
+    category:'STEM Programs',
+    desc:'A highly selective FREE 5-week residential summer program at Carnegie Mellon University for Pennsylvania\'s top high school students in science and math. College-level courses, hands-on lab experiments, and mentorship from CMU faculty. One of the most prestigious STEM programs available to PA students — Chester County students are eligible.',
+    eligibility:'Pennsylvania high school students completing 10th or 11th grade with exceptional STEM ability. Competitive statewide application. Fully funded — no cost.',
+    deadline:'Apply in Spring 2026 — check sciences.pa-gov-schools.org',
+    deadlineDate: new Date('2026-03-15'),
+    how:'Apply at sciences.pa-gov-schools.org. Program runs June 21 – July 25, 2026 at Carnegie Mellon University, Pittsburgh.',
+    source:'sciences.pa-gov-schools.org — Carnegie Mellon University, Pittsburgh PA',
+    url:'https://sciences.pa-gov-schools.org/',
+    grades:['11th','12th'],
+    gpaMin:'35plus',
+    interests:['STEM']
+  },
+  {
+    id:'i15', type:'internship',
+    title:'Pennsylvania State Government High School Internship',
+    amount:'Paid · Part-time',
+    category:'STEM Programs',
+    desc:'The Commonwealth of Pennsylvania runs a formal high school internship program placing students in state government agencies across PA. Roles span IT, environmental science, communications, public policy, and administration. A unique way to get real government work experience while still in high school.',
+    eligibility:'Current high school students across Pennsylvania. Placement varies by agency and location. Contact PA Department of Human Resources for Chester County placements.',
+    deadline:'Rolling — check pa.gov for current openings',
+    deadlineDate: new Date('2026-09-01'),
+    how:'Visit pa.gov/agencies/hrmoa/programs/hire-separation/high-school-internships for open positions and application instructions.',
+    source:'pa.gov — Commonwealth of Pennsylvania',
+    url:'https://www.pa.gov/agencies/hrmoa/programs/hire-separation/high-school-internships',
+    grades:['10th','11th','12th'],
+    gpaMin:'below3',
+    interests:['General','STEM','Community']
   }
 ];
 
@@ -1228,6 +1409,54 @@ const universityPrograms = [
     url:'https://www.nyu.edu/admissions/high-school-and-middle-school-programs.html',
     grades:['6th','7th','8th','9th','10th','11th','12th'],
     level:'Middle School'
+  }  ,
+  {
+    id:'u21', type:'university',
+    title:'Franklin Institute STEM Scholars Program',
+    amount:'FREE',
+    category:'Free / Low Cost',
+    tags:['High School','STEM','Free'],
+    desc:'The Franklin Institute in Philadelphia runs STEM Scholars — a competitive program pairing high school students with scientists and engineers for mentored research experiences. The Franklin is 28 miles from Phoenixville and one of the most respected science institutions in the region.',
+    eligibility:'Philadelphia-area high school students with strong STEM interest. Chester County students are eligible.',
+    deadline:'Check fi.edu for 2026 application dates',
+    deadlineDate: new Date('2026-04-01'),
+    how:'Visit fi.edu/en/science-and-education/stem-scholars for application info and current program dates.',
+    source:'fi.edu — The Franklin Institute, Philadelphia PA (28 miles)',
+    url:'https://www.fi.edu/en/science-and-education/stem-scholars',
+    grades:['9th','10th','11th','12th'],
+    level:'High School'
+  },
+  {
+    id:'u22', type:'university',
+    title:'Penn Summer Mentorship Program (Engineering)',
+    amount:'FREE',
+    category:'Free / Low Cost',
+    tags:['High School','STEM','Free'],
+    desc:'A free 4-week summer program at Penn\'s School of Engineering for Philadelphia-area high school students in 9th and 10th grade. Attend lab demonstrations, meet faculty and researchers, explore engineering disciplines, and get college readiness workshops including financial aid and SAT prep. Chester County students within 60 miles qualify.',
+    eligibility:'Philadelphia-area high school students currently in 9th or 10th grade with a minimum 3.0 GPA. Program held on Penn\'s campus in Philadelphia.',
+    deadline:'February 21, 2026',
+    deadlineDate: new Date('2026-02-21'),
+    how:'Apply at diversity.seas.upenn.edu. Program runs July 7 – August 1, 2026.',
+    source:'seas.upenn.edu — University of Pennsylvania, Philadelphia PA (28 miles)',
+    url:'https://diversity.seas.upenn.edu',
+    grades:['9th','10th'],
+    level:'High School'
+  },
+  {
+    id:'u23', type:'university',
+    title:'GSK Science in the Summer',
+    amount:'FREE',
+    category:'Free / Low Cost',
+    tags:['Middle School','STEM','Free'],
+    desc:'GSK\'s 35-year-old flagship education program brings free hands-on STEM classes to middle school students during summer break. Run in partnership with community organizations across Philadelphia and Chester County, it focuses on students from underserved communities. Classes are taught at local community sites — no transportation to a university needed.',
+    eligibility:'Elementary and middle school students (grades K-8) in the Philadelphia area including Chester County. Free, runs through community partners.',
+    deadline:'Check gsk.com for 2026 community partner locations',
+    deadlineDate: new Date('2026-06-01'),
+    how:'Visit gsk.com or contact Chester County community organizations to find a program near you. GSK partners with local nonprofits to host classes.',
+    source:'gsk.com — GSK, Collegeville/King of Prussia PA (8-12 miles)',
+    url:'https://us.gsk.com/en-us/responsibility/our-people/in-the-community/',
+    grades:['6th','7th','8th'],
+    level:'Middle School'
   }
 ];
 
@@ -1243,7 +1472,8 @@ function renderUniversityPrograms() {
     const matchQ = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.source.toLowerCase().includes(q) || (p.tags && p.tags.join(' ').toLowerCase().includes(q));
     return matchCat && matchQ;
   });
-  grid.innerHTML = filtered.length ? filtered.map(p => uniCardHTML(p)).join('') : '<p style="color:var(--slate);padding:2rem">No matching programs found.</p>';
+  const sorted = sortByDeadline(filtered);
+  grid.innerHTML = sorted.length ? sorted.map(p => uniCardHTML(p)).join('') : '<p style="color:var(--slate);padding:2rem">No matching programs found.</p>';
 }
 
 function uniCardHTML(item) {
@@ -1281,98 +1511,54 @@ let currentDistrict = 'phoenixville';
 // ============================================================
 // DISTRICT DATA
 // ============================================================
-const districtData = {
-  phoenixville: { label:'Phoenixville · 19460', hasStatic:true, extraScholarships:[] },
-  westchester: {
-    label:'West Chester · 19380', hasStatic:true,
-    extraScholarships:[
-      { id:'wc1', type:'scholarship', title:'WCU General Scholarship', amount:'Varies — hundreds available', amountNum:3000, category:'General',
-        desc:'West Chester University offers 600+ scholarships for incoming and current students covering merit, need, arts, STEM, and leadership. One General Application covers many awards.',
-        eligibility:'Incoming and current WCU students. Most require FAFSA completion.',
-        deadline:'Rolling — check wcupa.edu/scholarships', deadlineDate:new Date('2026-05-01'),
-        how:'Apply at wcupa.edu/scholarships.', source:'wcupa.edu — West Chester University', url:'https://www.wcupa.edu/financialAid/scholarships.aspx',
-        grades:['12th'], gpaMin:'3to35', interests:['General','STEM','Arts','Healthcare','Community'] },
-      { id:'wc2', type:'scholarship', title:'CCCF Universal Application (West Chester)', amount:'Multiple awards', amountNum:4000, category:'General',
-        desc:'The CCCF Universal Application covers dozens of named scholarships for Chester County residents including West Chester area students.',
-        eligibility:'Chester County residents attending or planning post-secondary education.',
-        deadline:'March 15, 2026', deadlineDate:new Date('2026-03-15'),
-        how:'Apply at chescocf.org.', source:'chescocf.org — Chester County Community Foundation', url:'https://www.chescocf.org',
-        grades:['11th','12th'], gpaMin:'3to35', interests:['General','STEM','Arts','Community','Healthcare'] }
-    ]
-  },
-  downingtown: {
-    label:'Downingtown · 19335', hasStatic:true,
-    extraScholarships:[
-      { id:'dt1', type:'scholarship', title:"Downingtown Woman's Club Scholarship", amount:'Varies', amountNum:2000, category:'General',
-        desc:'A long-standing local scholarship for Downingtown-area students recognizing academic achievement and community involvement.',
-        eligibility:'Downingtown area high school seniors.',
-        deadline:'Spring 2026 — check chescocf.org', deadlineDate:new Date('2026-04-01'),
-        how:'Apply through chescocf.org Universal Application.', source:'chescocf.org — Chester County Community Foundation', url:'https://www.chescocf.org',
-        grades:['12th'], gpaMin:'3to35', interests:['General','Community'] },
-      { id:'dt2', type:'scholarship', title:'Mullestein Family Scholarship', amount:'Varies', amountNum:2000, category:'General',
-        desc:'A scholarship for Downingtown-area students through the Chester County Community Foundation Universal Application.',
-        eligibility:'Chester County students, Downingtown area preferred.',
-        deadline:'March 15, 2026', deadlineDate:new Date('2026-03-15'),
-        how:'Apply at chescocf.org.', source:'chescocf.org — Chester County Community Foundation', url:'https://www.chescocf.org',
-        grades:['12th'], gpaMin:'3to35', interests:['General'] }
-    ]
-  },
-  coatesville: {
-    label:'Coatesville · 19320', hasStatic:true,
-    extraScholarships:[
-      { id:'cv1', type:'scholarship', title:'Rotary Club of Coatesville Scholarship', amount:'Varies', amountNum:2500, category:'Community',
-        desc:'The Coatesville Rotary Club awards scholarships to local seniors demonstrating academic achievement, leadership, and community service.',
-        eligibility:'Coatesville Area School District seniors with strong community involvement.',
-        deadline:'Spring 2026 — contact CASD guidance', deadlineDate:new Date('2026-04-15'),
-        how:'Contact Coatesville Area High School guidance or apply via chescocf.org.', source:'chescocf.org — Chester County Community Foundation', url:'https://www.chescocf.org',
-        grades:['12th'], gpaMin:'3to35', interests:['Community','General'] },
-      { id:'cv2', type:'scholarship', title:'Western Chester County Chamber Scholarship', amount:'Varies', amountNum:2000, category:'General',
-        desc:'The Western Chester County Chamber awards scholarships to seniors in Coatesville and surrounding area, including a Trades Scholarship for CTE students.',
-        eligibility:'Seniors in the Chamber service area. Trades award requires 2.0+ GPA and CTE enrollment.',
-        deadline:'April 15, 2026 (academic) · May 13, 2026 (trades)', deadlineDate:new Date('2026-04-15'),
-        how:'Apply at westernchestercounty.com.', source:'westernchestercounty.com — Western Chester County Chamber', url:'https://www.westernchestercounty.com/chamberscholarship/',
-        grades:['12th'], gpaMin:'3to35', interests:['General','Community'] }
-    ]
-  },
-  greatvalley: {
-    label:'Great Valley · 19355', hasStatic:true,
-    extraScholarships:[
-      { id:'gv1', type:'scholarship', title:'CCCF Universal Application (Great Valley)', amount:'Multiple awards', amountNum:4000, category:'General',
-        desc:'Great Valley students in Malvern and Berwyn are eligible for dozens of CCCF scholarships covering merit, arts, healthcare, STEM, and need-based awards.',
-        eligibility:'Chester County residents in the Great Valley School District.',
-        deadline:'March 15, 2026', deadlineDate:new Date('2026-03-15'),
-        how:'Apply at chescocf.org.', source:'chescocf.org — Chester County Community Foundation', url:'https://www.chescocf.org',
-        grades:['11th','12th'], gpaMin:'3to35', interests:['General','STEM','Arts','Healthcare','Community'] }
-    ]
-  },
-  kennett: {
-    label:'Kennett Square · 19348', hasStatic:true,
-    extraScholarships:[
-      { id:'ks1', type:'scholarship', title:'CCCF Universal Application (Kennett)', amount:'Varies', amountNum:2000, category:'Community',
-        desc:'Kennett Consolidated students can access local scholarships through the CCCF Universal Application. Kennett Square has strong community foundation funding.',
-        eligibility:'Kennett Consolidated School District seniors.',
-        deadline:'March 15, 2026', deadlineDate:new Date('2026-03-15'),
-        how:'Apply at chescocf.org and check Kennett High School guidance for district-specific awards.', source:'chescocf.org', url:'https://www.chescocf.org',
-        grades:['12th'], gpaMin:'3to35', interests:['Community','General'] }
-    ]
-  },
-  octorara: {
-    label:'Octorara · 19310', hasStatic:true,
-    extraScholarships:[
-      { id:'oc1', type:'scholarship', title:'Western CC Chamber Trades Scholarship', amount:'Varies', amountNum:1500, category:'General',
-        desc:'Available to Octorara seniors enrolled in CTE programs, covering tuition for trade certifications or two-year degrees.',
-        eligibility:'Octorara seniors in a CTE program with 2.0+ cumulative GPA and 2.5+ CTE GPA.',
-        deadline:'May 13, 2026', deadlineDate:new Date('2026-05-13'),
-        how:'Apply at westernchestercounty.com or contact Octorara guidance.', source:'westernchestercounty.com', url:'https://www.westernchestercounty.com/chamberscholarship/',
-        grades:['12th'], gpaMin:'below3', interests:['General','STEM'] }
-    ]
-  },
-  owenjroberts: { label:'Owen J. Roberts · 19465', hasStatic:false, extraScholarships:[] },
-  oxford: { label:'Oxford · 19363', hasStatic:false, extraScholarships:[] },
-  tredyffrin: { label:'Tredyffrin-Easttown · 19301', hasStatic:false, extraScholarships:[] },
-  unionville: { label:'Unionville-Chadds Ford · 19317', hasStatic:false, extraScholarships:[] },
-  other: { label:'Other Chester County', hasStatic:false, extraScholarships:[] }
-};
+// ============================================================
+// DISTRICT DATA — loaded from data/districts.json
+// ============================================================
+let districtData = {};
+
+async function loadDistricts() {
+  try {
+    const res = await fetch('/data/districts.json');
+    const json = await res.json();
+
+    // Convert array to keyed object, parse deadlineDates in extraScholarships
+    json.districts.forEach(d => {
+      if (typeof d !== 'object' || !d.id) return; // skip comment entries
+      d.extraScholarships = (d.extraScholarships || []).map(s => ({
+        ...s,
+        deadlineDate: new Date(s.deadlineDate)
+      }));
+      districtData[d.id] = d;
+    });
+
+    // Populate district picker from JSON
+    const select = document.getElementById('district-select');
+    const mobileDrawerDistrict = document.getElementById('district-select-mobile');
+    if (select) {
+      select.innerHTML = json.districts
+        .filter(d => d.id && d.id !== 'other')
+        .map(d => {
+          const county = d.county !== 'Chester County' ? ` (${d.county})` : '';
+          return `<option value="${d.id}">${d.label}${county}</option>`;
+        })
+        .join('') + '<option value="other">Other Chester County zip →</option>';
+    }
+
+    // Set initial district tag
+    const first = json.districts.find(d => d.id === 'phoenixville');
+    if (first) document.getElementById('district-tag').textContent = first.label;
+
+    renderScholarships();
+  } catch(e) {
+    console.warn('Could not load districts.json, using fallback', e);
+    // Fallback — keep site working even if JSON fails
+    districtData = {
+      phoenixville: { label:'Phoenixville · 19460', hasStatic:true, extraScholarships:[] },
+      other: { label:'Other Chester County', hasStatic:false, extraScholarships:[] }
+    };
+    renderScholarships();
+  }
+}
 
 function switchDistrict(val) {
   currentDistrict = val;
@@ -1400,12 +1586,37 @@ function switchDistrict(val) {
 async function runAISearch() {
   const zip = document.getElementById('ai-zip-input').value.trim();
   if (!zip || zip.length !== 5) { alert('Please enter a valid 5-digit ZIP code'); return; }
+
+  // Pennsylvania ZIP codes range from 15000–19640
+  const zipNum = parseInt(zip, 10);
+  const isPA = zipNum >= 15000 && zipNum <= 19640;
+
   const resultsDiv = document.getElementById('ai-results');
   const btn = document.querySelector('.ai-search-btn');
   resultsDiv.classList.remove('hidden');
-  resultsDiv.className = 'ai-results loading';
+  resultsDiv.className = 'ai-results';
+
+  if (!isPA) {
+    resultsDiv.innerHTML = `
+      <div style="background:#fef9c3;border:1.5px solid #f59e0b;border-radius:10px;padding:1rem">
+        <div style="font-weight:700;color:#92400e;margin-bottom:0.4rem">📍 Outside our coverage area</div>
+        <div style="font-size:0.85rem;color:#78350f;line-height:1.6">
+          ScholarFind is built specifically for <strong>Chester County, PA</strong> students — ZIP <strong>${zip}</strong> is outside our coverage area so our local data won't be relevant to you.
+          <div style="margin-top:0.75rem">For scholarships in your area try:</div>
+          <div style="margin-top:0.5rem;display:flex;flex-direction:column;gap:0.3rem">
+            <a href="https://www.fastweb.com" target="_blank" style="color:#1a9e8f;font-weight:600">→ Fastweb.com — free national scholarship search</a>
+            <a href="https://www.scholarships.com" target="_blank" style="color:#1a9e8f;font-weight:600">→ Scholarships.com — matches by profile</a>
+            <a href="https://studentaid.gov" target="_blank" style="color:#1a9e8f;font-weight:600">→ StudentAid.gov — federal aid & grants</a>
+            <span style="color:#92400e">→ Your school district guidance office — for local awards</span>
+          </div>
+        </div>
+      </div>`;
+    return;
+  }
+
   btn.disabled = true;
   btn.textContent = 'Searching…';
+  resultsDiv.className = 'ai-results loading';
   resultsDiv.innerHTML = '<span style="display:inline-block;animation:spin 1s linear infinite;margin-right:6px">⏳</span> Searching for scholarships near ZIP ' + zip + '…';
   try {
     const response = await fetch('/.netlify/functions/search-scholarships', {
@@ -1442,6 +1653,17 @@ let quizAnswers = {};
 // ============================================================
 // RENDER
 // ============================================================
+function sortByDeadline(items) {
+  const now = new Date();
+  return [...items].sort((a, b) => {
+    const aPast = a.deadlineDate < now;
+    const bPast = b.deadlineDate < now;
+    if (aPast && !bPast) return 1;   // a is past, b is active → b first
+    if (!aPast && bPast) return -1;  // a is active, b is past → a first
+    return a.deadlineDate - b.deadlineDate; // both same status → sort by date
+  });
+}
+
 function renderScholarships() {
   const q = (document.getElementById('search-schol')?.value || '').toLowerCase();
   const grid = document.getElementById('schol-grid');
@@ -1452,7 +1674,8 @@ function renderScholarships() {
     const matchQ = !q || s.title.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q) || s.category.toLowerCase().includes(q);
     return matchCat && matchQ;
   });
-  grid.innerHTML = filtered.length ? filtered.map(s => cardHTML(s)).join('') : '<p style="color:var(--slate);padding:2rem">No matching scholarships found.</p>';
+  const sorted = sortByDeadline(filtered);
+  grid.innerHTML = sorted.length ? sorted.map(s => cardHTML(s)).join('') : '<p style="color:var(--slate);padding:2rem">No matching scholarships found.</p>';
 }
 
 function renderInternships() {
@@ -1463,7 +1686,8 @@ function renderInternships() {
     const matchQ = !q || s.title.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q) || s.category.toLowerCase().includes(q);
     return matchCat && matchQ;
   });
-  grid.innerHTML = filtered.length ? filtered.map(s => cardHTML(s)).join('') : '<p style="color:var(--slate);padding:2rem">No matching internships found.</p>';
+  const sorted = sortByDeadline(filtered);
+  grid.innerHTML = sorted.length ? sorted.map(s => cardHTML(s)).join('') : '<p style="color:var(--slate);padding:2rem">No matching internships found.</p>';
 }
 
 function cardHTML(item) {
@@ -1496,10 +1720,13 @@ function getUrgency(d) {
 }
 
 function renderDeadlines() {
-  const all = [...scholarships, ...internships, ...universityPrograms].filter(x => x.deadlineDate).sort((a,b)=>a.deadlineDate-b.deadlineDate);
   const now = new Date();
+  const all = [...scholarships, ...internships, ...universityPrograms].filter(x => x.deadlineDate);
+  const active = all.filter(x => x.deadlineDate >= now).sort((a,b) => a.deadlineDate - b.deadlineDate);
+  const past = all.filter(x => x.deadlineDate < now).sort((a,b) => b.deadlineDate - a.deadlineDate);
   const grid = document.getElementById('deadline-grid');
-  grid.innerHTML = all.map(item => {
+
+  function deadlineCardHTML(item) {
     const days = Math.round((item.deadlineDate - now) / 86400000);
     const cls = days < 0 ? 'ok' : days <= 14 ? 'urgent' : days <= 45 ? 'soon' : 'ok';
     const label = days < 0 ? 'Passed' : `${days} days`;
@@ -1512,7 +1739,20 @@ function renderDeadlines() {
         <a href="${item.url}" target="_blank" onclick="event.stopPropagation()" style="font-size:0.78rem;color:var(--teal);font-weight:600;text-decoration:none">Apply →</a>
       </div>
     </div>`;
-  }).join('');
+  }
+
+  let html = active.map(deadlineCardHTML).join('');
+
+  if (past.length > 0) {
+    html += `<div style="grid-column:1/-1;display:flex;align-items:center;gap:1rem;margin-top:0.5rem">
+      <div style="flex:1;height:1px;background:var(--light)"></div>
+      <span style="font-size:0.78rem;font-weight:600;color:#94a3b8;white-space:nowrap">⏰ Past deadlines (${past.length})</span>
+      <div style="flex:1;height:1px;background:var(--light)"></div>
+    </div>`;
+    html += past.map(deadlineCardHTML).join('');
+  }
+
+  grid.innerHTML = html;
 }
 
 function renderSaved() {
@@ -1729,23 +1969,46 @@ async function subscribeEmail() {
   }
 }
 
-// Hide signup card if already subscribed
-if (localStorage.getItem('sf_email_subscribed')) {
-  const card = document.getElementById('email-signup-card');
-  if (card) card.style.display = 'none';
+// ============================================================
+// WELCOME MODAL
+// ============================================================
+function closeWelcome() {
+  const el = document.getElementById('welcome-overlay');
+  if (el) el.classList.remove('open');
+  localStorage.setItem('sf_welcomed', '1');
 }
 
 // ============================================================
-// INIT
+// INIT — runs after full DOM is loaded
 // ============================================================
-renderScholarships();
-renderInternships();
-renderUniversityPrograms();
-document.getElementById('saved-count').textContent = savedItems.length;
-document.getElementById('saved-count-mobile').textContent = savedItems.length;
-if (localStorage.getItem('disc_dismissed')) {
-  document.getElementById('disclaimer-bar').classList.add('hidden');
-}
+document.addEventListener('DOMContentLoaded', function() {
+  loadDistricts(); // loads districts.json then calls renderScholarships()
+  renderInternships();
+  renderUniversityPrograms();
+
+  const savedCount = document.getElementById('saved-count');
+  const savedCountMobile = document.getElementById('saved-count-mobile');
+  if (savedCount) savedCount.textContent = savedItems.length;
+  if (savedCountMobile) savedCountMobile.textContent = savedItems.length;
+
+  // Disclaimer bar
+  const disclaimerBar = document.getElementById('disclaimer-bar');
+  if (disclaimerBar && localStorage.getItem('disc_dismissed')) {
+    disclaimerBar.classList.add('hidden');
+  }
+
+  // Welcome modal — show on first visit only
+  const welcomeOverlay = document.getElementById('welcome-overlay');
+  if (welcomeOverlay && !localStorage.getItem('sf_welcomed')) {
+    welcomeOverlay.classList.add('open');
+  }
+
+  // Hide email signup if already subscribed
+  if (localStorage.getItem('sf_email_subscribed')) {
+    const card = document.getElementById('email-signup-card');
+    if (card) card.style.display = 'none';
+  }
+});
 </script>
 <!-- DISCLAIMER BAR -->
 <div class="disclaimer-bar" id="disclaimer-bar">
